@@ -11,7 +11,6 @@ import {
   ThemeProvider,
   CssBaseline,
   Switch,
-  Badge,
   Button,
   Menu,
   MenuItem,
@@ -22,7 +21,6 @@ import {
   ListItem,
   Divider,
   ListItemText,
-  InputBase,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import CancelIcon from '@material-ui/icons/Cancel';
@@ -88,9 +86,6 @@ export default function layout({ title, children }) {
   };
 
   const [query, setQuery] = useState('');
-  const queryChangeHandler = (e) => {
-    setQuery(e.target.value);
-  };
 
   useEffect(() => {
     fetchCategories();

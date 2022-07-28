@@ -15,6 +15,7 @@ import Product from '../models/Product';
 import Banner from '../models/Banner';
 import Carousel from 'react-material-ui-carousel';
 import useStyles from '../utils/styles';
+import Image from 'next/image';
 
 export default function Home(props) {
   const classes = useStyles();
@@ -32,11 +33,11 @@ export default function Home(props) {
           {featuredProducts.map((product) => (
             <NextLink key={product._id} href={`${product.link}`}>
               <Link>
-                <img
+                <Image>
                   src={product.image}
                   alt={product.title}
                   className={classes.featuredImage}
-                ></img>
+                </Image>
               </Link>
             </NextLink>
           ))}

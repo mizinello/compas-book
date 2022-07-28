@@ -1,5 +1,4 @@
 import {
-  Button,
   Card,
   CardActionArea,
   CardActions,
@@ -10,7 +9,7 @@ import {
 import React from 'react';
 import NextLink from 'next/link';
 
-export default function ProductItem({ product, addToCartHandler }) {
+export default function ProductItem({ product }) {
   return (
     <Card>
       <NextLink href={`/product/${product.slug}`} passHref>

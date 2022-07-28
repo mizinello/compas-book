@@ -26,7 +26,6 @@ export default function Register() {
 
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const router = useRouter();
-  const { redirect } = router.query;
   const { state, dispatch } = useContext(Store);
   const { userInfo } = state;
 

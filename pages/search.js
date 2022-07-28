@@ -19,22 +19,22 @@ import useStyles from '../utils/styles';
 import { Store } from '../utils/Store';
 import axios from 'axios';
 
-const prices = [
-  {
-    name: '$1 to $50',
-    value: '1-50',
-  },
-  {
-    name: '$51 to $200',
-    value: '51-200',
-  },
-  {
-    name: '$201 to $1000',
-    value: '201-1000',
-  },
-];
+// const prices = [
+//   {
+//     name: '$1 to $50',
+//     value: '1-50',
+//   },
+//   {
+//     name: '$51 to $200',
+//     value: '51-200',
+//   },
+//   {
+//     name: '$201 to $1000',
+//     value: '201-1000',
+//   },
+// ];
 
-const ratings = [1, 2, 3, 4, 5];
+// const ratings = [1, 2, 3, 4, 5];
 
 export default function Search(props) {
   const classes = useStyles();
@@ -42,23 +42,23 @@ export default function Search(props) {
   const {
     query = 'all',
     category = 'all',
-    brand = 'all',
-    price = 'all',
-    rating = 'all',
-    sort = 'featured',
+    // brand = 'all',
+    // price = 'all',
+    // rating = 'all',
+    // sort = 'featured',
   } = router.query;
-  const { products, countProducts, categories, brands, pages } = props;
+  const { products, countProducts, categories } = props;
 
   const filterSearch = ({
     page,
     category,
-    brand,
+    // brand,
     sort,
-    min,
-    max,
+    // min,
+    // max,
     searchQuery,
-    price,
-    rating,
+    // price,
+    // rating,
   }) => {
     const path = router.pathname;
     const { query } = router;
@@ -75,21 +75,7 @@ export default function Search(props) {
   const categoryHandler = (e) => {
     filterSearch({ category: e.target.value });
   };
-  const pageHandler = (e, page) => {
-    filterSearch({ page });
-  };
-  const brandHandler = (e) => {
-    filterSearch({ brand: e.target.value });
-  };
-  const sortHandler = (e) => {
-    filterSearch({ sort: e.target.value });
-  };
-  const priceHandler = (e) => {
-    filterSearch({ price: e.target.value });
-  };
-  const ratingHandler = (e) => {
-    filterSearch({ rating: e.target.value });
-  };
+
   console.log(products);
   const { state, dispatch } = useContext(Store);
   const addToCartHandler = async (product) => {

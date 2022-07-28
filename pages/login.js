@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
   Typography,
   ListItem,
@@ -127,7 +127,7 @@ export default function login() {
             </Button>
           </ListItem>
           <ListItem>
-            Don't have an account?&nbsp;
+            Don&apos;t have an account?&nbsp;
             <NextLink href={`/register?redirect=${redirect | '/'}`} passHref>
               <Link>Register</Link>
             </NextLink>
