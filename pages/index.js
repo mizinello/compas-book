@@ -33,11 +33,13 @@ export default function Home(props) {
           {featuredProducts.map((product) => (
             <NextLink key={product._id} href={`${product.link}`}>
               <Link>
-                <Image>
+                <Image
                   src={product.image}
                   alt={product.title}
                   className={classes.featuredImage}
-                </Image>
+                  height={240}
+                  width={1200}
+                />
               </Link>
             </NextLink>
           ))}
