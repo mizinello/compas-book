@@ -52,14 +52,14 @@ export default function layout({ title, children }) {
         fontWeight: 400,
         margin: '1rem 0',
       },
-      bpdy1: {
+      body1: {
         fontWeight: 'normal',
       },
     },
     palette: {
       type: darkMode ? 'dark' : 'light',
       primary: {
-        main: '#f0c000',
+        main: '#b400ff',
       },
       secondary: {
         main: '#208080',
